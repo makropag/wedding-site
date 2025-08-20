@@ -14,14 +14,15 @@
         body {
             font-family: 'Cormorant Garamond', serif;
             background-color: #faf7f5;
-            color: #5a5a5a;
-            line-height: 1.6;
+            color: #444;
+            line-height: 1.8;
+            font-size: 20px;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 30px;
         }
         
         /* Герой секция с именами */
@@ -39,21 +40,21 @@
         
         .hero h1 {
             font-size: 5rem;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             font-weight: 300;
         }
         
         .hero .names {
-            font-size: 3.5rem;
-            margin-bottom: 30px;
+            font-size: 4rem;
+            margin-bottom: 40px;
             letter-spacing: 3px;
         }
         
         .hero .date {
-            font-size: 1.8rem;
-            margin-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.5);
-            padding-top: 20px;
+            font-size: 2.2rem;
+            margin-top: 30px;
+            border-top: 2px solid rgba(255, 255, 255, 0.6);
+            padding-top: 25px;
         }
         
         /* Секции */
@@ -63,8 +64,8 @@
         
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
+            font-size: 3rem;
+            margin-bottom: 60px;
             color: #d4a373;
             position: relative;
         }
@@ -72,24 +73,59 @@
         .section-title:after {
             content: "";
             position: absolute;
-            bottom: -15px;
+            bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 2px;
+            width: 100px;
+            height: 3px;
             background-color: #d4a373;
         }
         
-        /* Речь */
-        .speech {
+        /* Приглашение */
+        .invitation {
             background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             margin: 0 auto;
-            font-size: 1.2rem;
-            line-height: 1.8;
+            font-size: 22px;
+            line-height: 1.9;
+        }
+        
+        .invitation p {
+            margin-bottom: 25px;
+        }
+        
+        /* Детали */
+        .details {
+            background-color: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            font-size: 22px;
+            line-height: 1.9;
+        }
+        
+        .details h3 {
+            font-size: 28px;
+            color: #d4a373;
+            margin: 35px 0 20px 0;
+        }
+        
+        .details ul {
+            margin: 25px 0;
+            padding-left: 30px;
+        }
+        
+        .details li {
+            margin-bottom: 18px;
+            font-size: 21px;
+        }
+        
+        .details strong {
+            color: #d4a373;
+            font-weight: 600;
         }
         
         /* Место проведения */
@@ -98,62 +134,63 @@
         }
         
         .location-info {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         
         .location-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
             color: #d4a373;
         }
         
         .location-info p {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
         }
         
         .map {
-            height: 400px;
+            height: 450px;
             background-color: #eee;
-            border-radius: 10px;
-            margin-top: 30px;
+            border-radius: 15px;
+            margin-top: 35px;
             display: flex;
             justify-content: center;
             align-items: center;
             background: url('https://placehold.co/800x400?text=Карта+места+проведения') no-repeat center center/cover;
+            font-size: 1.3rem;
         }
         
         /* Таймер */
         .countdown {
             background-color: #f8edeb;
             text-align: center;
-            padding: 60px 0;
+            padding: 70px 0;
         }
         
         .timer {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
+            gap: 35px;
+            margin-top: 40px;
         }
         
         .timer-item {
             background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            min-width: 100px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
         }
         
         .timer-number {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: bold;
             color: #d4a373;
         }
         
         .timer-label {
-            font-size: 1rem;
-            margin-top: 5px;
+            font-size: 1.3rem;
+            margin-top: 8px;
         }
         
         /* Футер */
@@ -161,30 +198,62 @@
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 30px 0;
-            margin-top: 50px;
+            padding: 40px 0;
+            margin-top: 60px;
+            font-size: 1.3rem;
         }
         
         /* Адаптивность */
         @media (max-width: 768px) {
+            body {
+                font-size: 18px;
+            }
+            
             .hero h1 {
-                font-size: 3rem;
+                font-size: 3.5rem;
             }
             
             .hero .names {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
+            }
+            
+            .hero .date {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .invitation, .details {
+                padding: 30px;
+                font-size: 19px;
+            }
+            
+            .details li {
+                font-size: 18px;
             }
             
             .timer {
                 flex-wrap: wrap;
+                gap: 20px;
             }
             
-            .speech {
+            .timer-item {
+                min-width: 90px;
                 padding: 20px;
+            }
+            
+            .timer-number {
+                font-size: 2.2rem;
+            }
+            
+            .container {
+                padding: 0 20px;
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Герой секция -->
@@ -194,12 +263,12 @@
         <div class="date">25 Сентября 2025</div>
     </header>
     
-   <main>
+    <main>
         <!-- Приглашение -->
         <section id="invitation">
             <div class="container">
                 <h2 class="section-title">Дорогие гости!</h2>
-                <div class="speech">
+                <div class="invitation">
                     <p>Лилия и Дамиль приглашают вас отпраздновать самый важный день в нашей жизни и разделить с нами радость нашего союза на свадебном банкете.</p>
                     
                     <div class="location-info">
@@ -227,7 +296,7 @@
                     <p>Мы решили отказаться от традиции кричать «Горько!» на нашем празднике. Для нас важно, чтобы каждый поцелуй был желанным и искренним, а не по заказу :)</p>
                     <p>Давайте вместе создадим атмосферу уважения и комфорта!</p>
                     
-                    <p style="margin-top: 30px; font-style: italic;">
+                    <p style="margin-top: 40px; font-style: italic; font-size: 23px;">
                         Просим подтвердить ваше присутствие до 10 Сентября 2025 года.
                     </p>
                 </div>
@@ -301,4 +370,3 @@
     </script>
 </body>
 </html>
-
