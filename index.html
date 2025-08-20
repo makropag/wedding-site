@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свадьба Анны и Михаила</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #faf7f5;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Герой секция с именами */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://placehold.co/1920x1080?text=Фото+молодоженов') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .hero .names {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            letter-spacing: 3px;
+        }
+        
+        .hero .date {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            padding-top: 20px;
+        }
+        
+        /* Секции */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #d4a373;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: #d4a373;
+        }
+        
+        /* Речь */
+        .speech {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        /* Место проведения */
+        .location {
+            text-align: center;
+        }
+        
+        .location-info {
+            margin-bottom: 30px;
+        }
+        
+        .location-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #d4a373;
+        }
+        
+        .location-info p {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .map {
+            height: 400px;
+            background-color: #eee;
+            border-radius: 10px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://placehold.co/800x400?text=Карта+места+проведения') no-repeat center center/cover;
+        }
+        
+        /* Таймер */
+        .countdown {
+            background-color: #f8edeb;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .timer-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            min-width: 100px;
+        }
+        
+        .timer-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #d4a373;
+        }
+        
+        .timer-label {
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+        
+        /* Футер */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero .names {
+                font-size: 2.5rem;
+            }
+            
+            .timer {
+                flex-wrap: wrap;
+            }
+            
+            .speech {
+                padding: 20px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Герой секция -->
+    <header class="hero">
+        <h1>Мы женимся!</h1>
+        <div class="names">Анна & Михаил</div>
+        <div class="date">15 Июня 2023</div>
+    </header>
+    
+    <main>
+        <!-- Речь -->
+        <section id="speech">
+            <div class="container">
+                <h2 class="section-title">Наша история</h2>
+                <div class="speech">
+                    <p>Дорогие друзья и родные!</p>
+                    <p>Мы рады сообщить вам, что наша любовь, которая началась в далеком 2018 году, наконец-то приведет нас к самому важному дню в нашей жизни. Мы встретились совершенно случайно в уютном кафе в центре города, и с той самой минуты поняли, что нашли друг в друге что-то особенное.</p>
+                    <p>С тех пор мы прошли через многое вместе: поддерживали друг друга в трудные моменты, радовались успехам, путешествовали и строили планы на будущее. И вот теперь мы готовы сделать самый важный шаг в нашей жизни — связать наши судьбы узами брака.</p>
+                    <p>Для нас большая честь разделить этот особенный день с вами, дорогие наши гости. Ваше присутствие сделает наш праздник по-настоящему теплым и незабываемым.</p>
+                    <p>С любовью, Анна и Михаил</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Место проведения -->
+        <section id="location" class="location">
+            <div class="container">
+                <h2 class="section-title">Место проведения</h2>
+                <div class="location-info">
+                    <h3>Ресторан "Белая Вежа"</h3>
+                    <p>ул. Центральная, 15, г. Минск</p>
+                    <p>Начало в 16:00</p>
+                </div>
+                <div class="map"></div>
+            </div>
+        </section>
+        
+        <!-- Таймер -->
+        <section class="countdown">
+            <div class="container">
+                <h2 class="section-title">До свадьбы осталось</h2>
+                <div class="timer">
+                    <div class="timer-item">
+                        <div class="timer-number" id="days">0</div>
+                        <div class="timer-label">дней</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-number" id="hours">0</div>
+                        <div class="timer-label">часов</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-number" id="minutes">0</div>
+                        <div class="timer-label">минут</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-number" id="seconds">0</div>
+                        <div class="timer-label">секунд</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>С любовью, Анна и Михаил</p>
+        </div>
+    </footer>
+
+    <script>
+        // Таймер обратного отсчета
+        function updateCountdown() {
+            const weddingDate = new Date('June 15, 2023 16:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
