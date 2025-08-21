@@ -28,15 +28,18 @@
         /* Герой секция с именами - ИСПРАВЛЕНА */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), 
-                        url('https://i.ibb.co/BVjnJkgH/photo-2024-12-25-22-19-31.jpg') no-repeat center center;
-            background-size: cover;
+            min-height: 600px;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), 
+                url('https://i.ibb.co/BVjnJkgH/photo-2024-12-25-22-19-31.jpg') no-repeat center center;
+            background-size: contain; /* Изменено с cover на contain */
+            background-color: #f0e6e0; /* Цвет фона если изображение не заполняет всю область */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: white;
+            color: #333;
             padding: 20px;
             position: relative;
         }
@@ -45,31 +48,33 @@
             position: relative;
             z-index: 2;
             max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
         }
         
         .hero h1 {
-            font-size: 4.5rem;
+            font-size: 4rem;
             margin-bottom: 20px;
             font-weight: 300;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-            letter-spacing: 2px;
+            color: #8b5a2b;
         }
         
         .hero .names {
-            font-size: 5.5rem;
+            font-size: 5rem;
             margin-bottom: 30px;
-            letter-spacing: 4px;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-            font-weight: 400;
+            letter-spacing: 3px;
+            color: #d4a373;
+            font-weight: 500;
         }
         
         .hero .date {
-            font-size: 2.5rem;
-            margin-top: 40px;
+            font-size: 2.2rem;
+            margin-top: 30px;
             padding-top: 25px;
-            border-top: 2px solid rgba(255, 255, 255, 0.7);
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-            letter-spacing: 2px;
+            border-top: 2px solid rgba(139, 90, 43, 0.3);
+            color: #8b5a2b;
         }
         
         /* Секции */
@@ -225,12 +230,20 @@
                 font-size: 18px;
             }
             
+            .hero {
+                background-size: cover; /* На мобильных лучше использовать cover */
+            }
+            
+            .hero-content {
+                padding: 30px 20px;
+            }
+            
             .hero h1 {
                 font-size: 2.8rem;
             }
             
             .hero .names {
-                font-size: 3.5rem;
+                font-size: 3.2rem;
             }
             
             .hero .date {
@@ -279,7 +292,7 @@
             }
             
             .hero .names {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
             
             .hero .date {
