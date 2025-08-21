@@ -25,21 +25,20 @@
             padding: 0 30px;
         }
         
-        /* Герой секция с именами - ИСПРАВЛЕНА */
+        /* Герой секция с именами */
         .hero {
             height: 100vh;
             min-height: 600px;
             background: 
                 linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), 
-                url('https://i.ibb.co/BVjnJkgH/photo-2024-12-25-22-19-31.jpg') no-repeat center center;
-            background-size: contain; /* Изменено с cover на contain */
-            background-color: #f0e6e0; /* Цвет фона если изображение не заполняет всю область */
+                url('https://i.postimg.cc/MZYDVtHM/snapedit-1755760321628.jpg') no-repeat center center;
+            background-size: cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: #333;
+            color: white;
             padding: 20px;
             position: relative;
         }
@@ -230,10 +229,6 @@
                 font-size: 18px;
             }
             
-            .hero {
-                background-size: cover; /* На мобильных лучше использовать cover */
-            }
-            
             .hero-content {
                 padding: 30px 20px;
             }
@@ -308,6 +303,27 @@
                 font-size: 1.8rem;
             }
         }
+
+        .upload-instructions {
+            background-color: #f8f3f0;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            font-size: 18px;
+        }
+        
+        .upload-instructions h3 {
+            color: #d4a373;
+            margin-bottom: 15px;
+        }
+        
+        .upload-instructions ol {
+            padding-left: 25px;
+        }
+        
+        .upload-instructions li {
+            margin-bottom: 10px;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -322,6 +338,23 @@
     </header>
     
     <main>
+        <!-- Инструкция по загрузке -->
+        <section>
+            <div class="container">
+                <div class="upload-instructions">
+                    <h3>Как загрузить ваше фото без потери качества:</h3>
+                    <ol>
+                        <li>Перейдите на <a href="https://postimages.org/" target="_blank">PostImages.org</a></li>
+                        <li>Нажмите "Выберите изображения" и загрузите ваше фото</li>
+                        <li>В настройках выберите "Original size"</li>
+                        <li>Скопируйте прямую ссыку на изображение</li>
+                        <li>Вставьте её в код вместо текущей ссылки на изображение</li>
+                    </ol>
+                    <p>После загрузки вашего изображения, замените ссылку в коде в разделе "Герой секция с именами".</p>
+                </div>
+            </div>
+        </section>
+        
         <!-- Приглашение -->
         <section id="invitation">
             <div class="container">
